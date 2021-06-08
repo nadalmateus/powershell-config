@@ -1,0 +1,12 @@
+Clear-Host
+# Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme spaceship
+
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+Set-PSReadLineOption -ShowToolTips
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -HistoryNoDuplicates
